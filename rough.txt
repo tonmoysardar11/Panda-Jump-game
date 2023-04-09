@@ -1,0 +1,16 @@
+switch (e.keyCode) {
+        
+        case 38:
+            panda.classList.add('jumpPanda');
+            jump.play();
+            setTimeout(() => {
+                panda.classList.remove('jumpPanda');
+            }, 1500);
+            case 39:
+            px= parseInt( window.getComputedStyle(panda,null).getPropertyValue('left'));
+            panda.style.left+=(100+'px');
+            case 37:
+            px= parseInt( window.getComputedStyle(panda,null).getPropertyValue('left'));
+            panda.style.left-=(100+'px');
+
+    }

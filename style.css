@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    overflow: hidden;
+}
+.gameContainer{
+    font-family: 'Rubik Iso', cursive;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+img{
+    width: 10rem;
+}
+.panda{
+    background-image: url(po.png);
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 10vh;
+    left: 45px;
+    background-size: contain;
+    opacity: 1;
+}
+.gopanda{
+    background-image: url(gameover.png);
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 10vh;
+    left: 40vw;
+    background-size: contain;
+    opacity: 0;
+}
+.jumpPanda{
+    animation-name: jump;
+    animation-duration: 1.5s;
+}
+@keyframes jump {
+    0%    {bottom: 10vh;}
+    50%   {bottom: 60vh;}
+    100%   {bottom: 10vh;}
+    
+  }
+
+.tai{
+    background-image: url(tailung.png);
+    background-repeat: no-repeat;
+    width: 14rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 10vh;
+    left: 110vw;
+    background-size: contain;
+    
+}
+.shien{
+    background-image: url(shien.png);
+    background-repeat: no-repeat ;
+    width: 14rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 10vh;
+    left: 110vw;
+    background-size: contain;
+    
+}
+.kai{
+    background-image: url(kai.png);
+    background-repeat: no-repeat;
+    width: 14rem;
+    height: 14rem;
+    position: absolute;
+    bottom: 10vh;
+    left: 110vw;
+    background-size: contain;
+    
+}
+.walk{
+    animation-name: walk; 
+    animation-duration: 3s;
+    animation-timing-function: linear;
+
+}
+
+
+@keyframes walk {
+    0%    {left: 100vw;}
+    100%   {left: -10vw;}
+    
+  }
+
+
+  #gameover{
+    font-family: 'Rubik Iso', cursive;
+    font-size: 3.5rem;
+    position: absolute;
+    left: 35vw;
+    font-weight: bold;
+    text-align: center;
+  }
+  #gobanner{
+    opacity: 0;
+  }
+  #reset{
+    text-align: center;
+    opacity: 0;
+  }
+  #again,#play{
+    cursor: pointer;
+  }
